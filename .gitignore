@@ -106,8 +106,11 @@ Thumbs.db
 **/chromadb/
 **/chroma.sqlite3
 
-# Allow services folder but exclude virtual environments and database files
+# Allow server and services folders but exclude build artifacts and virtual environments
+!server/
 !services/
+server/node_modules/
+server/dist/
 services/venv/
 services/**/venv/
 services/**/chromadb/
