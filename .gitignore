@@ -95,7 +95,7 @@ storage/files/*
 .DS_Store
 Thumbs.db
 
-# Python virtual environments (but allow the services folder)
+# Python virtual environments
 **/venv/
 **/__pycache__/
 *.pyc
@@ -106,10 +106,9 @@ Thumbs.db
 **/chromadb/
 **/chroma.sqlite3
 
-# But allow the services folder structure
+# Allow services folder but exclude virtual environments and database files
 !services/
-!services/**/*.py
-!services/**/*.txt
-!services/**/*.md
-!services/**/*.json
-!services/**/requirements.txt
+services/venv/
+services/**/venv/
+services/**/chromadb/
+services/**/__pycache__/
